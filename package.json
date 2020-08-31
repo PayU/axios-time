@@ -1,0 +1,21 @@
+{
+    "name": "axios-timing-plugin",
+    "version": "1.0.0",
+    "description": "Axios plugin to measure the actual time it takes for a request to complete",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/_mocha ./tests/test"
+    },
+    "author": "PayU",
+    "license": "Apache-2.0",
+    "files": [
+        "src"
+    ],
+    "dependencies": {
+        "chai": "^4.2.0"
+    },
+    "devDependencies": {
+        "axios": "^0.20.0",
+        "mocha": "^8.1.2"
+    }
+}
