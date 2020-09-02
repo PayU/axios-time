@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - node/install:
-          node-version: << parameters.node-version >>
+          node-version: << parameters.version >>
           install-npm: true
       - run: npm run test
 
@@ -19,4 +19,4 @@ wokrflows:
       - build:
           matrix:
             parameters:
-              node-version: ["10", "11", "12", "13", "14"]
+              version: ["10", "11", "12", "13", "14"]
