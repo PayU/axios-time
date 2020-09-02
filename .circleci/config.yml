@@ -10,7 +10,7 @@ jobs:
       - checkout
       - node/install:
           node-version: << parameters.node-version >>
-      - run: npm install
+          install-npm: true
       - run: npm run test
 
 wokrflows:
