@@ -27,6 +27,7 @@ describe('testing axios-time package', () => {
             await axios.get('127.0.0.1');
         } catch (err) {
             expect(err.response).to.eql(undefined);
+            expect(err.message).to.eql('read ECONNRESET');
         }
     });
 });
