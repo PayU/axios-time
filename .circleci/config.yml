@@ -3,7 +3,7 @@ orbs:
 
 version: 2.1
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/node:12
     steps:
@@ -16,8 +16,7 @@ jobs:
 wokrflows:
   all-tests:
     jobs:
-      - test:
+      - build:
           matrix:
             parameters:
-              os: [linux, macos]
               node-version: ["10", "11", "12", "13", "14"]
