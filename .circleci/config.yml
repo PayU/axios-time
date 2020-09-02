@@ -13,7 +13,7 @@ jobs:
           install-npm: true
       - run: npm run test
 
-wokrflows:
+workflows:
   all-tests:
     jobs:
       - build:
