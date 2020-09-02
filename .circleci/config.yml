@@ -4,6 +4,9 @@ orbs:
 version: 2.1
 jobs:
   build:
+    parameters:
+      version:
+        type: string
     docker:
       - image: circleci/node:12
     steps:
