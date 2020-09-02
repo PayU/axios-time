@@ -24,7 +24,7 @@ describe('testing axios-time package', () => {
     });
     it('should not have response on client error', async () => {
         try {
-            await axios.get('127.0.0.1');
+            await axios.get('http://asdasdasd.com');
         } catch (err) {
             expect(err.response).to.eql(undefined);
             expect(err.message).to.eql('read ECONNRESET');
