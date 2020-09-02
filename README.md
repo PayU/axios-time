@@ -7,14 +7,14 @@ Axios plugin to measure the actual time it takes for a request to complete
 ## Installation
 You can install this plugin using **NPM**
 ```bash
-> npm i axios-timing-plugin
+> npm i axios-time
 ```
 
 ## Basic Usage
 The example below will add timing data to the request-response cycle.
 ```js
 const axios = require('axios');
-const axiosTimingPlugin = require('src/index');
+const axiosTimingPlugin = require('axios-time');
 
 axiosTimingPlugin(axios);
 

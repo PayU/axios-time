@@ -8,13 +8,9 @@ axiosTimingPlugin(axios);
 
 describe('testing axios-time package', () => {
     it('should have described timing properties correctly', async () => {
-        try {
-            const response = await axios.get('http://ynet.co.il');
-            expect(response.timings).to.have.property('timingEnd').that.is.a('number');
-            expect(response.timings).to.have.property('timingStart').that.is.a('number');
-            expect(response.timings).to.have.property('elapsedTime').that.is.a('number');
-        } catch(err) {
-            throw(err);
-        }
+        const response = await axios.get('http://ynet.co.il');
+        expect(response.timings).to.have.property('timingEnd').that.is.a('number');
+        expect(response.timings).to.have.property('timingStart').that.is.a('number');
+        expect(response.timings).to.have.property('elapsedTime').that.is.a('number');
     });
 });
