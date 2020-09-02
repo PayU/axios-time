@@ -24,8 +24,12 @@ try {
 }
 ```
 
-**response.timings.timingStart** - Timestamp of the start of the request (in Unix Epoch milliseconds).
+response.timings object example:
 
-**response.timings.timingEnd** - Timestamp when the response ended (in Unix Epoch milliseconds).
-
-**response.timings.elapsedTime** - Duration of the entire request/response in milliseconds.
+```js
+{
+  "timingEnd": 1599035291441,   // Timestamp of the start of the request (in Unix Epoch milliseconds).
+  "timingStart": 1599035289182, // Timestamp when the response ended (in Unix Epoch milliseconds).
+  "elapsedTime": 2259           // Duration of the entire request/response in milliseconds.
+}
+```
