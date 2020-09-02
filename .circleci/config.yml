@@ -1,13 +1,23 @@
+orbs:
+  node: circleci/node@2.0.2
+
 version: 2.1
 jobs:
-  build:
-    matrix:
-      parameters:
-        os: [linux, macos]
-        node-version: ["10", "11", "12", "13", "14"]
+  test:
     docker:
       - image: circleci/node:12
     steps:
       - checkout
+      - node/install:
+          node-version: << parameters.node-version >>
       - run: npm install
       - run: npm run test
+
+wokrflows:
+  all-tests:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              os: [linux, macos]
+              node-version: ["10", "11", "12", "13", "14"]
