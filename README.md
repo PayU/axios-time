@@ -1,7 +1,7 @@
 ![npm](https://img.shields.io/npm/v/axios-time)
 
 
-# axios-timing-plugin
+# axios-time
 Axios plugin to measure the actual time it takes for a request to complete
 
 ## Installation
@@ -14,9 +14,9 @@ You can install this plugin using **NPM**
 The example below will add timing data to the request-response cycle.
 ```js
 const axios = require('axios');
-const axiosTimingPlugin = require('axios-time');
+const axiosTime = require('axios-time');
 
-axiosTimingPlugin(axios);
+axiosTime(axios);
 
 try {
     const response = await axios.get('/user');

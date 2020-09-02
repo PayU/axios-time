@@ -1,10 +1,10 @@
 'use strict';
 
 const axios = require('axios');
-const axiosTimingPlugin = require('../src/index');
+const axiosTime = require('../src/index');
 const expect = require('chai').expect;
 
-axiosTimingPlugin(axios);
+axiosTime(axios);
 
 describe('testing axios-time package', () => {
     it('should have described timing properties correctly', async () => {
