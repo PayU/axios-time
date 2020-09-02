@@ -1,6 +1,10 @@
 version: 2.1
 jobs:
   build:
+    matrix:
+      parameters:
+        os: [linux, macos]
+        node-version: ["10", "11", "12", "13", "14"]
     docker:
       - image: circleci/node:12
     steps:
