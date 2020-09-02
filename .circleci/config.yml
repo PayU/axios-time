@@ -5,15 +5,12 @@ version: 2.1
 jobs:
   build:
     parameters:
-      version:
+      docker-image:
         type: string
     docker:
-      - image: circleci/node:12
+      - image: << parameters.docker-image >>
     steps:
       - checkout
-      - node/install:
-          node-version: << parameters.version >>
-          install-npm: true
       - run:
           name: Install dependencies
           command: npm ci
@@ -27,4 +24,4 @@ workflows:
       - build:
           matrix:
             parameters:
-              version: ["10.22.0", "12.18.3", "14.9.0"]
+              docker-image: ["node:10", "node:12", "node:14"]
