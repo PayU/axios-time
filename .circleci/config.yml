@@ -1,9 +1,27 @@
+orbs:
+  node: circleci/node@2.0.2
+
 version: 2.1
 jobs:
   build:
+    parameters:
+      docker-image:
+        type: string
     docker:
-      - image: circleci/node:12
+      - image: << parameters.docker-image >>
     steps:
       - checkout
-      - run: npm install
-      - run: npm run test
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Run test
+          command: npm run test
+
+workflows:
+  all-tests:
+    jobs:
+      - build:
+          matrix:
+            parameters:
+              docker-image: ["node:10", "node:12", "node:14"]
