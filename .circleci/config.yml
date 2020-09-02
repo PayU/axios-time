@@ -14,8 +14,12 @@ jobs:
       - node/install:
           node-version: << parameters.version >>
           install-npm: true
-      - node/install-packages
-      - run: npm run test
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Run test
+          command: npm run test
 
 workflows:
   all-tests:
