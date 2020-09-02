@@ -19,4 +19,4 @@ workflows:
       - build:
           matrix:
             parameters:
-              version: ["10", "11", "12", "13", "14"]
+              version: ["10.9.0", "11.9.0", "12.9.1", "13.9.0"]
