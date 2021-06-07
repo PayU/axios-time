@@ -1,5 +1,8 @@
 "use strict";
 
+/**
+ * @param {Object} instance
+ */
 module.exports = function (instance) {
     instance.interceptors.request.use(function (request) {
         request.timingStart = Date.now();
@@ -13,7 +16,7 @@ module.exports = function (instance) {
     }, function (error) {
         if (error.response){
             error.response.timings = getResponseTimingData(error.response);
-        };
+        }
 
         return Promise.reject(error);
     });
@@ -35,6 +38,4 @@ const calcElapsedTime = (timingStart, timingEnd) => {
     if (timingStart && timingEnd) {
         return Math.round(timingEnd - timingStart);
     }
-
-    return;
 };
