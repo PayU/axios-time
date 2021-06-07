@@ -1,5 +1,5 @@
 ![npm](https://img.shields.io/npm/v/axios-time)
-
+![main workflow](https://github.com/PayU/axios-time/actions/workflows/main.yml/badge.svg)
 
 # axios-time
 Axios plugin to measure the actual time it takes for a request to complete
