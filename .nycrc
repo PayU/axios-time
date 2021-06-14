@@ -1,6 +1,6 @@
 {
   "reporter": [
-    "json",
-    "text-summary"
+    "text-summary",
+    "lcov"
   ]
 }
