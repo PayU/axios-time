@@ -4,7 +4,9 @@
     "description": "Axios plugin to measure the actual time it takes for a request to complete",
     "main": "src/index.js",
     "scripts": {
-        "test": "$(npm bin)/mocha ./tests/test"
+        "test": "$(npm bin)/mocha ./tests/test",
+        "test:coverage": "npx nyc mocha ./tests/test",
+        "test:coveralls": "npm run test:coverage && cat ./coverage/lcov.info"
     },
     "author": "PayU",
     "license": "Apache-2.0",
@@ -14,6 +16,7 @@
     "devDependencies": {
         "chai": "^4.2.0",
         "axios": "^0.20.0",
-        "mocha": "^8.1.2"
+        "mocha": "^8.1.2",
+        "nyc": "^15.1.0"
     }
 }
