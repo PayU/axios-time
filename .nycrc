@@ -1,0 +1,6 @@
+{
+  "reporter": [
+    "json",
+    "text-summary"
+  ]
+}

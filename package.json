@@ -5,7 +5,8 @@
     "main": "src/index.js",
     "scripts": {
         "test": "$(npm bin)/mocha ./tests/test",
-        "test-with-coverage": "$(npm bin)/nyc mocha ./tests/test"
+        "test:coverage": "npx nyc mocha ./tests/test",
+        "test:coveralls": "npm run test:coverage && cat ./coverage/lcov.info"
     },
     "author": "PayU",
     "license": "Apache-2.0",
